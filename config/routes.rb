@@ -1,4 +1,8 @@
 FounderFlirting::Application.routes.draw do
+  get "pages/frontpage"
+
+  get "pages/story"
+
   devise_for :users
 
   # The priority is based upon order of creation:
