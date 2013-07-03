@@ -40,4 +40,6 @@ gem 'jquery-rails'
 gem 'draper'
 gem 'devise'
 
-gem 'cucumber-rails', :group => [:development, :test]
+group :test do
+  gem 'cucumber-rails'
+end
