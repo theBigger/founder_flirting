@@ -36,3 +36,8 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'draper'
+gem 'devise'
+
+gem 'cucumber-rails', :group => [:development, :test]
