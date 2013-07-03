@@ -1,4 +1,7 @@
 FounderFlirting::Application.routes.draw do
+  resources :projects
+
+
   get "pages/frontpage"
 
   get "pages/story"
