@@ -36,7 +36,7 @@
         <% else %>
           <ul class="pull-right nav">
             <li>
-              <%= link_to current_user.name, profile_url(current_user) %>
+              <%= link_to current_user.name, edit_user_registration_path %>
             </li>
             <li>
               <%= link_to "登出", destroy_user_session_path, :method => :delete %>
