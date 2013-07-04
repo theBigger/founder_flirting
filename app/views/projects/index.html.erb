@@ -1,27 +1,30 @@
-<h1>Listing projects</h1>
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>项目展示</h1>
+    </div>
+  </div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="row-fluid">
+    <div class="span12">
+      <%= paginate @projects, :theme => 'twitter-bootstrap' %>
+    </div>
 
-<% @projects.each do |project| %>
-  <tr>
-    <td><%= project.name %></td>
-    <td><%= project.description %></td>
-    <td><%= project.user_id %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <% @projects.each do |project| %>
+    <div class="span12">
+      <h2><%= link_to project.name, project %><small>&nbsp; BY <%= link_to project.user.name, profile_url(project.user) %></small></h2>
+      <p><%= truncate project.description, :length => 40 %></p>
+    </div>
+    <% end %>
 
-<br />
+    <div class="span12">
+      <%= paginate @projects, :theme => 'twitter-bootstrap' %>
+    </div>
 
-<%= link_to 'New Project', new_project_path %>
+    
+    <div class="span12">
+      <p><a href="<%= new_project_path %>" class="btn btn-huge"><i class="icon-plus"></i>&nbsp; 添加我的项目</a></p>
+    </div>
+  </div>
+
+</div>

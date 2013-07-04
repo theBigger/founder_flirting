@@ -1,6 +1,10 @@
 FounderFlirting::Application.routes.draw do
   resources :buzzs
-  resources :projects
+  resources :projects do
+    collection do
+      get 'random'
+    end
+  end
   resources :profiles, :only => [:show, :index]
 
   get "pages/frontpage"

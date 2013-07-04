@@ -1,20 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1><%= link_to @project.name, @project %> <small>BY <%= link_to @project.user.name, profile_url(@project.user) %></small></h1>
+    </div>
 
-<p>
-  <b>Name:</b>
-  <%= @project.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @project.description %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @project.user_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+    <div class="span12">
+      <%= simple_format @project.description %>
+    </div>
+    
+    <div class="span12">
+      <% if @project.user == current_user %>
+        <%= link_to '编辑', edit_project_path(@project) %>
+        /
+      <% end %>
+  
+      <%= link_to '项目列表', projects_path %>
+    </div>
+  </div>
+</div>
