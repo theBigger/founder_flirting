@@ -1,4 +1,7 @@
 FounderFlirting::Application.routes.draw do
+  resources :buzzs
+
+
   resources :projects
 
 

@@ -1,0 +1,23 @@
+<h1>Listing buzzs</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @buzzs.each do |buzz| %>
+  <tr>
+    <td><%= buzz.content %></td>
+    <td><%= link_to 'Show', buzz %></td>
+    <td><%= link_to 'Edit', edit_buzz_path(buzz) %></td>
+    <td><%= link_to 'Destroy', buzz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Buzz', new_buzz_path %>
