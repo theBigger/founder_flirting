@@ -1,17 +1,13 @@
 FounderFlirting::Application.routes.draw do
   resources :buzzs
-
-
   resources :projects
-
+  resources :profiles, :only => [:show, :index]
 
   get "pages/frontpage"
-
   get "pages/story"
 
   devise_for :users
 
-  resources :profiles, :only => [:show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
