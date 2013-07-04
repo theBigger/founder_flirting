@@ -9,6 +9,7 @@ FounderFlirting::Application.routes.draw do
 
   get "pages/frontpage"
   get "pages/story"
+  get "pages/dashboard"
 
   devise_for :users
 
