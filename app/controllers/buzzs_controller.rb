@@ -1,4 +1,6 @@
 class BuzzsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new, :edit, :create, :update, :destroy]
+
   # GET /buzzs
   # GET /buzzs.json
   def index
