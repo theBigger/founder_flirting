@@ -45,3 +45,5 @@ gem 'devise'
 group :test do
   gem 'cucumber-rails'
 end
+
+gem 'turbolinks'
