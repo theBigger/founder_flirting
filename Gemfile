@@ -47,3 +47,6 @@ group :test do
 end
 
 gem 'turbolinks'
+
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
