@@ -31,5 +31,7 @@ class User < ActiveRecord::Base
   
   attr_accessible :name, :profile
 
+  validates :name, :uniqueness => true, :length => {:minimum => 1}
+
   has_many :projects
 end
