@@ -1,10 +1,21 @@
 FounderFlirting::Application.routes.draw do
+  resources :flirts, :only => [:create] do
+    post "repoy"
+
+    collection do
+      get "received"
+      get "sent"
+    end
+  end
+
   resources :buzzs
+
   resources :projects do
     collection do
       get 'random'
     end
   end
+
   resources :profiles, :only => [:show, :index]
 
   get "pages/frontpage"

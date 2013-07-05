@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>你好呀， <%= current_user.name %></h1>
+    </div>
+
+    <div class="span12">
+      <h2>勾搭动向</h2>
+      
+      <div class="row-fluid">
+        <div class="span12">
+        </div>
+
+        <div class="span12">
+          <h3>抛出的媚眼</h3>
+
+          <ul>
+            <% current_user.sent_flirts.limit(4).each do |flirt| %>
+              <li>抛向 <%= link_to flirt.receiver.name, profile_url(flirt.receiver) %> 的媚眼</li>
+            <% end %>
+          </ul>
+
+          <p><%= link_to "更多...", sent_flirts_url %></p>
+        </div>
+
+        <div class="span12">
+          <h3>收到的媚眼</h3>
+
+          <ul>
+            <% current_user.received_flirts.limit(4).each do |flirt| %>
+              <li>收到来自于 <%= link_to flirt.sender.name, profile_url(flirt.sender) %>的媚眼</li>
+            <% end %>
+          </ul>
+
+          <p><%= link_to "更多...", received_flirts_url %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="span12">
+    </div>
+  </div>
+</div>

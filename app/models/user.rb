@@ -34,4 +34,7 @@ class User < ActiveRecord::Base
   validates :name, :uniqueness => true, :length => {:minimum => 1}
 
   has_many :projects
+
+  has_many :sent_flirts, :class_name => "Flirt", :order => "updated_at DESC", :foreign_key => "from_user_id"
+  has_many :received_flirts, :class_name => "Flirt", :order => "updated_at DESC", :foreign_key => "to_user_id"
 end

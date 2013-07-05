@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>From user:</b>
+  <%= @flirt.from_user_id %>
+</p>
+
+<p>
+  <b>To user:</b>
+  <%= @flirt.to_user_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @flirt.project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_flirt_path(@flirt) %> |
+<%= link_to 'Back', flirts_path %>

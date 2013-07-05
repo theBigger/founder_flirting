@@ -1,0 +1,27 @@
+<h1>Listing flirts</h1>
+
+<table>
+  <tr>
+    <th>From user</th>
+    <th>To user</th>
+    <th>Project</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @flirts.each do |flirt| %>
+  <tr>
+    <td><%= flirt.from_user_id %></td>
+    <td><%= flirt.to_user_id %></td>
+    <td><%= flirt.project_id %></td>
+    <td><%= link_to 'Show', flirt %></td>
+    <td><%= link_to 'Edit', edit_flirt_path(flirt) %></td>
+    <td><%= link_to 'Destroy', flirt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Flirt', new_flirt_path %>

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>收到的媚眼</h1>
+    </div>
+
+    <div class="span12">
+      <ul>
+        <% @flirts.each do |flirt| %>
+          <li><%= time_ago_in_words(flirt.created_at) %>之前来自于 <%= link_to flirt.sender.name, profile_url(flirt) %> 的媚眼</li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="span12">
+      <%= paginate @flirts, :theme => 'twitter-bootstrap' %>
+    </div>
+  </div>
+</div>
