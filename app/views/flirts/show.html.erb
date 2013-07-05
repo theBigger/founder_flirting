@@ -1,20 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>恭喜你，有人给你抛媚眼了！</h1>
+    </div>
 
-<p>
-  <b>From user:</b>
-  <%= @flirt.from_user_id %>
-</p>
+    <div class="span12">
+      <%= @flirt.created_at %><br />
+      <%= link_to @flirt.sender.name, profile_url(@flirt.sender) %>向你抛了个媚眼。
+    </div>
 
-<p>
-  <b>To user:</b>
-  <%= @flirt.to_user_id %>
-</p>
-
-<p>
-  <b>Project:</b>
-  <%= @flirt.project_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_flirt_path(@flirt) %> |
-<%= link_to 'Back', flirts_path %>
+    <div class="span12">
+      <%= link_to "洒家觉得#{@flirt.sender.name}还是很靠谱的，发展发展", flirt_reply_url(@flirt), :method => :post, :class => "btn btn-primary" %>
+    </div>
+  </div>
+</div>

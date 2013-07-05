@@ -28,7 +28,7 @@
 
           <ul>
             <% current_user.received_flirts.limit(4).each do |flirt| %>
-              <li>收到来自于 <%= link_to flirt.sender.name, profile_url(flirt.sender) %>的媚眼</li>
+              <li>收到来自于 <%= link_to flirt.sender.name, profile_url(flirt.sender) %>的媚眼 <%= link_to "细节&rsaquo;".html_safe, flirt, :class => "btn" %></li>
             <% end %>
           </ul>
 

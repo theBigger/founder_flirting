@@ -1,6 +1,6 @@
 FounderFlirting::Application.routes.draw do
-  resources :flirts, :only => [:create] do
-    post "repoy"
+  resources :flirts, :only => [:create, :show] do
+    post "reply"
 
     collection do
       get "received"
