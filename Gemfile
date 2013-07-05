@@ -50,3 +50,5 @@ gem 'turbolinks'
 
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
+gem 'rails_admin'
+
