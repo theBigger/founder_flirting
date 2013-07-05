@@ -31,6 +31,9 @@ class Flirt < ActiveRecord::Base
   def reply
     self.state = 'REPLIED'
     self.save
+
+    UserMailer.flirt_sender_email(self).deliver
+    UserMailer.flirt_receiver_email(self).deliver
   end
 
   def interested?
