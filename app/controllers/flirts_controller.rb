@@ -1,5 +1,9 @@
 class FlirtsController < ApplicationController
   before_filter :authenticate_user!
+  
+  def show
+    @flirt = current_user.received_flirts.find_by_id(params[:id])
+  end
 
   def create
     @flirt = Flirt.new(params[:flirt])
@@ -20,7 +24,8 @@ class FlirtsController < ApplicationController
   end
 
   def reply
-    @flirt
+    @flirt = current_user.received_flirts.find(params[:flirt_id])
+    @flirt.reply
   end
 
   def received
