@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: flirts
+#
+#  id           :integer          not null, primary key
+#  from_user_id :integer
+#  to_user_id   :integer
+#  project_id   :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
 class Flirt < ActiveRecord::Base
   attr_accessible :from_user_id, :project_id, :to_user_id
 
