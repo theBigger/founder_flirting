@@ -12,7 +12,7 @@ FounderFlirting::Application.routes.draw do
     end
   end
 
-  resources :buzzs
+  # resources :buzzs
 
   resources :projects do
     collection do
