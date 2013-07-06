@@ -11,6 +11,7 @@
       <%= form_for(@user, :url => profile_path(@user), :html => {:method => :put}) do |f| %>
       <div class="span11">
         <%= f.label :profile, "个人简介" %><br />
+        <p class="alert">公开信息，请尽量填写详细，但是不要泄露个人身份隐私。</p>
         <%= f.text_area :profile, :class => "span7" %>
       </div>
       

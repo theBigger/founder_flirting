@@ -12,6 +12,7 @@
     <div class="span12">
       <h3>媚眼一箩筐</h3>
       
+      <% if current_user == @project.user %>
       <ul>
         <% @project.flirts.each do |flirt| %>
         <li>
@@ -19,16 +20,21 @@
         </li>
         <% end %>
       </ul>
+      <% else %>
+      共收获<%= @project.flirts.count %>个媚眼，很牛啊！
+      <% end %>
     </div>
     <% end %>
 
     <div class="span12">
       <%= form_for @project.flirts.build do |f| %>
         <%= f.hidden_field :project_id %>
-        <%= f.submit "抛个媚眼", :class => "btn btn-primary" %>
+        <%= f.submit "抛个媚眼", :class => "btn btn-primary" %> <em>抛媚眼表示你对这个项目很感兴趣，并且有机会的话你想和作者认识认识，你可以给项目带来一些资源(人力、物力、财力、影响力等等)，说不定可以参与合伙。 如果作者也表示对你感兴趣，抛回了媚眼，我们将会交换双方邮件，这样你们就可以畅谈了！</em>
       <% end %>
+      <p>
+        <span class="label label-success">注意：</span>抛出的媚眼只会被项目作者看见，别的人看不见你抛得媚眼。
+      </P>
     </div>
-
     
     <div class="span12">
       <% if @project.user == current_user %>
