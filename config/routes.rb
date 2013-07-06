@@ -20,7 +20,7 @@ FounderFlirting::Application.routes.draw do
     end
   end
 
-  resources :profiles, :only => [:show, :index]
+  resources :profiles, :only => [:show, :index, :update]
 
   get "pages/frontpage"
   get "pages/story"

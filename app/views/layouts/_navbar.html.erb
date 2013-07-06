@@ -33,7 +33,7 @@
           </li>-->
         </ul>
         <% if !current_user %>
-        <%= form_for("", :url => user_session_path, :html => {:class => "navbar-form pull-right"}) do |f| %>
+        <%= form_for("user", :url => user_session_path, :html => {:class => "navbar-form pull-right"}) do |f| %>
           <%= f.text_field(:email, :class => "span2", :placeholder => "邮箱") %>
           <%= f.password_field(:password, :class => "span2", :placeholder => "密码") %>
           <%= f.submit("登录", :class => "btn") %>

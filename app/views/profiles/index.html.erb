@@ -1,0 +1,33 @@
+<div class="container footer">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1><%= link_to "大家来组队", "/" %>会员</h1>
+    </div>
+
+    <div class="span12">
+      <%= paginate @users, :theme => 'twitter-bootstrap' %>
+    </div>
+
+    <div class="span12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>名号</th>
+            <th>细节</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.name %></td>
+              <td><%= link_to "细节", profile_url(user) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+      
+    <div class="span12">
+      <%= paginate @users, :theme => 'twitter-bootstrap' %>
+    </div>
