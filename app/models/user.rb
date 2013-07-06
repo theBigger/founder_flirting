@@ -32,6 +32,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :profile
 
   validates :name, :uniqueness => true, :length => {:minimum => 1}
+  validates :profile, :length => {:minimum => 10}
 
   has_many :projects, :order => "updated_at DESC"
 
