@@ -51,4 +51,4 @@ gem 'turbolinks'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'rails_admin'
-
+gem 'bootstrap-wysihtml5-rails'
