@@ -25,7 +25,9 @@ class FlirtsController < ApplicationController
 
   def reply
     @flirt = current_user.received_flirts.find(params[:flirt_id])
-    @flirt.reply
+    if @flirt.pending?
+      @flirt.reply
+    end
   end
 
   def received

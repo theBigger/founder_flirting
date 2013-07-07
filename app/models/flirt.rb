@@ -39,4 +39,8 @@ class Flirt < ActiveRecord::Base
   def interested?
     self.state == "REPLIED"
   end
+
+  def pending?
+    self.state == 'PENDING'
+  end
 end
