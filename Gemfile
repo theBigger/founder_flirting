@@ -52,3 +52,6 @@ gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'rails_admin'
 gem 'bootstrap-wysihtml5-rails'
+group :production do
+  gem 'newrelic_rpm'
+end
