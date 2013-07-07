@@ -38,13 +38,11 @@
     
     <div class="span12">
       <% if @project.user == current_user %>
-        <%= link_to '编辑', edit_project_path(@project) %>
-        /
+        <%= link_to '编辑', edit_project_path(@project), :class => "btn btn-primary" %>
       <% end %>
-    </div>
+      /
 
-    <div class="span12">
-      <%= link_to '回到项目列表', projects_path %>
+      <%= link_to '回到项目列表', projects_path, :class => "btn" %>
     </div>
   </div>
 </div>
