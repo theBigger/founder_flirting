@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 class ProjectsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:new, :edit, :create, :update, :destroy]
+  before_filter :authenticate_user!, :only => [:new, :edit, :create, :update, :destroy, :mine]
   before_filter :load_project!, :only => [:show, :edit, :update, :destroy]
   before_filter :authorize_user!, :only => [:edit, :update, :destroy]
+
+  def mine
+    @projects = current_user.projects.page params[:page]
+  end
 
   def random
     redirect_to Project.offset(rand(Project.count)).first

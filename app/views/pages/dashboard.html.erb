@@ -15,6 +15,7 @@
           <% current_user.projects.limit(10).each do |project| %>
             <li><%= link_to project.name, project %></li>
           <% end %>
+            <li><%= link_to "...", mine_projects_url %></li>
           </ul>
         </div>
       </div>
