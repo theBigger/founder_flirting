@@ -14,7 +14,8 @@ class Project < ActiveRecord::Base
   attr_accessible :description, :name, :user_id
 
   belongs_to :user
-  has_many :flirts
+  has_many :flirts, :dependent => :delete_all
+
 
   paginates_per 10
 end
