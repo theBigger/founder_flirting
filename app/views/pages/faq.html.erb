@@ -1,0 +1,98 @@
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>FAQ</h1>
+    </div>
+
+    <div class="section">
+      <h1 class="section-heading">机理</h1>
+      <div class="span12 faq">
+        <h2>我如果公开了我的项目想法，会不会有人抄袭？</h2>
+        <div class="answer">
+          <p>如果你不公开想法的话，怎么找到合伙人呢？</p>
+          <p>如果你现在不公开想法，找不到合伙人，项目进度慢会不会被别人捷足先登？</p>
+          <p>任何好项目都不会缺乏抄袭者，你不如去用 baidu 搜索下团购网站，看看什么叫做百花齐放</p>
+          <p>我的观点是，项目想法不值钱，没意思，项目有价值是从有了原型开始，没原型，没真相</p>
+        </div>
+      </div>
+
+      <div class="span12 faq">
+        <h2>我是一个项目的创始人/主人，你们网站可以给我带来什么</h2>
+        <div class="answer">
+          <p>好处如下
+            <ul>
+              <li>潜在的合作伙伴、投资人</li>
+              <li>潜在的专业人员，比如程序员、设计师、运营等等</li>
+              <li>潜在的志愿者</li>
+            </ul>
+          </p>
+          
+          <p>反正没什么坏处，最差最差应该还是能带来点流量的，对吧</p>
+        </div>
+      </div>
+
+      <div class="span12 faq">
+        <h2>谁能看见我的媚眼？</h2>
+        <div class="answer">
+          <p>隐私很重要，你抛出的媚眼只有你自己和对方知道，别的人都只知道有人抛出了媚眼给某个项目，但是并不知道是谁抛出的。所以，勇敢的抛出你的媚眼吧，机遇就在前方。</p>
+        </div>
+      </div>
+
+      <div class="span12 faq">
+        <h2>我找到一个项目，很感兴趣，但是找不到联系方式！！</h2>
+        <div class="answer">
+          <p>我们的宗旨是在保护隐私和自尊心的同时牵线搭桥，所以我们不提供联系方式。但是，如果你抛出了媚眼，并且项目所有人觉得你的资质、经历、特长比较符合他们，他们也很有兴趣，就可以抛回媚眼，这样的话，我们就会交换双方电子邮件，你们就可以随便线下交流了。</p>
+        </div>
+      </div>
+
+      <div class="span12 faq">
+        <h2>为什么项目所有人不能删除媚眼？</h2>
+        <div class="answer">
+          <p>首先，请想明白为什么要删除媚眼，原因不外
+            <ul>
+              <li>广告、spam - 请联系我们，我们来处理</li>
+              <li>对抛媚眼的人不感兴趣 - 请三思，因为项目在不同阶段有不同需求，说不定哪天您就需要帮助了。留着不抛回媚眼就是了</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <h1 class="section-heading">杂</h1>
+      <div class="span12 faq">
+        <h2>那些图片是谁画的?</h2>
+        <div class="answer">
+          <p><a href="https://github.com/qsun">我</a>画的。</p>
+        </div>
+      </div>
+      
+      <div class="span12 faq">
+        <h2>为什么你们网站那么丑?</h2>
+        <div class="answer">
+          <p>因为我不会美工，也不大会前台。</p>
+        </div>
+      </div>
+      
+      <div class="span12 faq">
+        <h2>为什么你们网站那么漂亮?</h2>
+        <div class="answer">
+          <p>因为我不会美工，也不大会前台。如果你觉得我们的项目还行，不妨去<%= link_to "抛个媚眼", Project.first %>。</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="span12 faq">
+      <h2>为什么你们网站那么漂亮?</h2>
+      <div class="answer">
+          <p>因为我不会美工，也不大会前台。如果你觉得我们的项目还行，不妨去<%= link_to "抛个媚眼", Project.first %>。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var faq = new FAQ;
+  faq.init();
+</script>

@@ -25,6 +25,7 @@ FounderFlirting::Application.routes.draw do
   get "pages/frontpage"
   get "pages/story"
   get "pages/dashboard"
+  get "pages/faq"
 
   devise_for :users
 

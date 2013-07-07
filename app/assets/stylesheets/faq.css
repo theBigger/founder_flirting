@@ -1,0 +1,9 @@
+div.faq h2 {
+    color: blue;
+    cursor: pointer;
+}
+
+div.faq h2:hover {
+    text-decoration: underline;
+    color: red;
+}
