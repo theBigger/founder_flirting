@@ -10,10 +10,10 @@
       <%= paginate @projects, :theme => 'twitter-bootstrap' %>
     </div>
 
-    <% ProjectDecorator.decorate_collection(@projects).each do |project| %>
+    <% @projects.each do |project| %>
     <div class="span12">
       <h2><%= link_to project.name, project %><small>&nbsp; BY <%= link_to project.user.name, profile_url(project.user) %></small></h2>
-      <p><%= project.summary 40 %></p>
+      <p><%= truncate project.description, :length => 40 %></p>
     </div>
     <% end %>
 

@@ -52,4 +52,3 @@ gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'rails_admin'
 
-gem 'tinymce-rails'

@@ -16,5 +16,6 @@ class Project < ActiveRecord::Base
   belongs_to :user
   has_many :flirts, :dependent => :delete_all
 
+
   paginates_per 10
 end

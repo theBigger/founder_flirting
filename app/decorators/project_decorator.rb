@@ -9,7 +9,5 @@ class ProjectDecorator < Draper::Decorator
   #       object.created_at.strftime("%a %m/%d/%y")
   #     end
   #   end
-  def summary(n=30)
-    helpers.strip_tags(self.description).truncate(n)
-  end
+
 end
