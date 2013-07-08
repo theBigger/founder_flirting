@@ -3,8 +3,8 @@ bg.jpg: bg-3fd8d2d954a28f71d5ebcadfe6c68068.jpg
 bg/index.jpg: bg-3fd8d2d954a28f71d5ebcadfe6c68068.jpg
 cream_dust.png: cream_dust-01cc6dd9b8bf3ba501ff1463a4564c5c.png
 cream_dust/index.png: cream_dust-01cc6dd9b8bf3ba501ff1463a4564c5c.png
-cream_dust.transparent.png: cream_dust.transparent-0f1670fed9b9dc0ce4d72c55d8ed4697.png
-cream_dust/index.transparent.png: cream_dust.transparent-0f1670fed9b9dc0ce4d72c55d8ed4697.png
+cream_dust.transparent.png: cream_dust.transparent-80e56fc5dfd8cdc3f95d3e195d2ec023.png
+cream_dust/index.transparent.png: cream_dust.transparent-80e56fc5dfd8cdc3f95d3e195d2ec023.png
 github.png: github-b1c2c1f98d2ac1ed3b9a10477887c983.png
 github/index.png: github-b1c2c1f98d2ac1ed3b9a10477887c983.png
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
@@ -19,8 +19,8 @@ story.png: story-fbec7a533566b858e5f6525919b21ce1.png
 story/index.png: story-fbec7a533566b858e5f6525919b21ce1.png
 application.js: application-d8f5bd25815a4ff9cff37c68c39fd409.js
 application/index.js: application-d8f5bd25815a4ff9cff37c68c39fd409.js
-application.css: application-15496d49a8d3d6074efb35800463dabb.css
-application/index.css: application-15496d49a8d3d6074efb35800463dabb.css
+application.css: application-4dee2934f7c64bed1f99939de74a4398.css
+application/index.css: application-4dee2934f7c64bed1f99939de74a4398.css
 bootstrap-wysihtml5.js: bootstrap-wysihtml5-d8e3837ccf9ce7a0883e9330d7fbc286.js
 bootstrap-wysihtml5/index.js: bootstrap-wysihtml5-d8e3837ccf9ce7a0883e9330d7fbc286.js
 bootstrap-wysihtml5.css: bootstrap-wysihtml5-757ecf6fbb670d36519a49c514ec3ea5.css
