@@ -1,0 +1,6 @@
+var bg = function () {
+    jQuery('.body-wrapper').backstretch("<%= asset_path 'bg.jpg' %>");
+};
+
+jQuery(document).ready(bg);
+jQuery(document).on(('page:load'), bg);

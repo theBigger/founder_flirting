@@ -8,11 +8,13 @@
 </head>
 <body>
 
-<%= render :partial => 'layouts/navbar' %>
-<%= render :partial => 'layouts/messages' %>
+  <%= render :partial => 'layouts/navbar' %>
+  
+  <div class="body-wrapper">
+    <%= render :partial => 'layouts/messages' %>
+    <%= yield %>
+    <%= render :partial => 'layouts/footer' %>
+  </div>
 
-<%= yield %>
-
-<%= render :partial => 'layouts/footer' %>
 </body>
 </html>

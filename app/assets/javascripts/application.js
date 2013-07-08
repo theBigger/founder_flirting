@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.backstretch.min
 //= require_tree .
 //= require turbolinks
 //= require bootstrap-wysihtml5
