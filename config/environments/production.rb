@@ -1,5 +1,6 @@
 FounderFlirting::Application.configure do
   config.assets.initialize_on_precompile = false
+  config.action_mailer.default_url_options = { :host => "www.obard.com" }
 
   # Settings specified here will take precedence over those in config/application.rb
 
