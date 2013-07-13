@@ -15,6 +15,8 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @message = Message.new(params[:message])
+    @message.save
+    MessageMailer.message_email(@message).deliver
     redirect_to root_path, notice: "已发送信息，谢谢！"
   end
 end
