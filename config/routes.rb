@@ -1,4 +1,7 @@
 FounderFlirting::Application.routes.draw do
+  resources :messages
+
+
   devise_for :admins
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
