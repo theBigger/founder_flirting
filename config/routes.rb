@@ -1,5 +1,5 @@
 FounderFlirting::Application.routes.draw do
-  resources :messages
+  resources :messages, :only => [:create, :new]
 
 
   devise_for :admins
